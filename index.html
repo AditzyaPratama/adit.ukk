@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Peminjaman Buku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Form Peminjaman Buku</h2>
+
+    <form id="formPeminjaman">
+        <label>Kode Pinjam:</label><br>
+        <input type="text" id="kodePinjam" required><br>
+
+        <label>Nama Peminjam:</label><br>
+        <input type="text" id="nama" required><br>
+
+        <label>ISBN/Barcode:</label><br>
+        <input type="text" id="isbn" required><br>
+
+        <label>Judul Buku:</label><br>
+        <input type="text" id="judul" required><br>
+
+        <label>Penerbit:</label><br>
+        <input type="text" id="penerbit" required><br>
+
+        <label>Tahun Terbit:</label><br>
+        <input type="number" id="tahunTerbit" min="1900" max="2099" required><br>
+
+        <label>Jumlah Buku:</label><br>
+        <select id="jumlahBuku" required>
+            <option value="">Pilih Jumlah</option>
+            <option value="1">1 Buku</option>
+            <option value="2">2 Buku</option>
+        </select><br>
+
+        <label>Tanggal Pinjam:</label><br>
+        <input type="date" id="tanggalPinjam" required><br>
+
+        <label>Tanggal Pengembalian:</label><br>
+        <input type="date" id="tanggalKembali" required><br>
+
+        <button type="submit">Simpan</button>
+    </form>
+
+    <h3>Daftar Peminjaman</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Kode Pinjam</th>
+                <th>Nama</th>
+                <th>ISBN/Barcode</th>
+                <th>Judul</th>
+                <th>Penerbit</th>
+                <th>Tahun Terbit</th>
+                <th>Jumlah</th>
+                <th>Tgl Pinjam</th>
+                <th>Tgl Kembali</th>
+                <th>Status</th>
+                <th>Denda</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="tabelData"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
